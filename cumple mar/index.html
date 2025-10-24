@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Feliz cumpleaños — Para vos</title>
+  <style>
+    :root{
+      --bg:#fff7f8;
+      --card:#fff;
+      --accent:#f6c6d6; /* rosa pastel */
+      --muted:#8b6f6f;
+      --shadow: 0 6px 20px rgba(20,20,20,0.06);
+      --radius:18px;
+      --maxw:900px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg,var(--bg),#fff);
+      color:#333;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+
+    .container{
+      max-width:var(--maxw);
+      margin:40px auto;
+      padding:20px;
+    }
+
+    header.hero{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:var(--shadow);
+      text-align:center;
+    }
+    .small-heart{font-size:26px}
+    h1{font-size:28px;margin:6px 0 4px;color:#5d3b48}
+    p.lead{margin:0;color:var(--muted)}
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:18px;
+      margin-top:20px;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:14px;
+      padding:14px;
+      box-shadow:var(--shadow);
+    }
+    .photo{
+      display:block;
+      width:100%;
+      height:180px;
+      object-fit:cover;
+      border-radius:10px;
+      margin-bottom:10px;
+      background:linear-gradient(90deg,#f7e8ea,#fff);
+    }
+
+    h2{font-size:20px;margin:6px 0;color:#6a3946}
+    .meta{font-size:13px;color:var(--muted);margin-bottom:6px}
+    .text{font-size:15px;color:#444}
+
+    footer{
+      text-align:center;margin-top:26px;color:var(--muted)
+    }
+
+    /* botón simple */
+    .btn{
+      display:inline-block;padding:10px 16px;border-radius:12px;background:var(--accent);color:#5b2e38;text-decoration:none;font-weight:600;box-shadow:0 6px 14px rgba(246,198,214,0.45);
+    }
+
+    /* modal bienvenida */
+    .overlay{
+      position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.35);backdrop-filter:blur(3px);
+    }
+    .modal{
+      width:92%;max-width:600px;background:var(--card);padding:26px;border-radius:20px;box-shadow:0 20px 50px rgba(20,20,20,0.25);text-align:center;
+    }
+    .modal h3{margin:0;font-size:26px}
+    .modal p{color:var(--muted);margin:8px 0 16px}
+    .close{
+      border:none;padding:10px 16px;border-radius:12px;background:var(--accent);font-weight:700;cursor:pointer
+    }
+
+    /* responsive adjustments */
+    @media (max-width:520px){
+      .photo{height:160px}
+      h1{font-size:22px}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header class="hero">
+      <div class="small-heart">❤️</div>
+      <h1>Feliz cumpleaños, mi amor ❤️</h1>
+      <p class="lead">Un pequeño espacio con recuerdos nuestros. Guardalo y volvé cuando quieras.</p>
+      <div style="margin-top:12px">
+        <a class="btn" href="#recuerdos">Ver recuerdos</a>
+      </div>
+    </header>
+
+    <main id="recuerdos">
+      <section class="grid" style="margin-top:22px">
+
+        <article class="card">
+          <img class="photo" src="images/foto1.JPEG" alt="Nuestro primer viaje">
+          <h2>Nuestro primer viaje</h2>
+          <div class="meta">Abril 2025 </div>
+          <div class="text">Nuestra primer escapada. Pasamos unos días hermosos juntos.</div>
+        </article>
+
+        <article class="card">
+          <img class="photo" src="images/foto2.JPEG" alt="Mi cumple">
+          <h2>Mi cumple</h2>
+          <div class="meta">Octubre 2025</div>
+          <div class="text">Siempre compartiendo momentos conmigo.</div>
+        </article>
+
+        <article class="card">
+          <img class="photo" src="images/foto3.JPEG" alt="Lo que más amo de vos">
+          <h2>Lo que más amo de vos</h2>
+          <div class="meta">Julio 2025</div>
+          <div class="text">Tu mirada. Veo tu amor a través de ella.</div>
+        </article>
+
+        <article class="card">
+          <img class="photo" src="images/foto4.JPEG" alt="Una foto linda">
+          <h2>Una foto linda</h2>
+          <div class="meta">Octubre 2025</div>
+          <div class="text">Una foto hermosa de los dos.</div>
+        </article>
+
+	<article class="card">
+          <img class="photo" src="images/foto5.JPEG" alt="Tus abrazos">
+          <h2>Tus abrazos</h2>
+          <div class="meta">Abril 2025</div>
+          <div class="text">Esos abrazos, que tanta paz me genera.</div>
+        </article>
+
+	<article class="card">
+          <img class="photo" src="images/foto6.JPEG" alt="Tus besos">
+          <h2>Tus besos</h2>
+          <div class="meta">Octubre 2025</div>
+          <div class="text">Esos besos, que me hacen sonreír al corazón.</div>
+        </article>
+
+	<article class="card">
+          <img class="photo" src="images/foto7.JPEG" alt="Momentos de tranquilidad">
+          <h2>Momentos de tranquilidad</h2>
+          <div class="meta">Noviembre 2024</div>
+          <div class="text">La tranquilidad de estar juntos por irnos a dormir.</div>
+        </article>
+
+	<article class="card">
+          <img class="photo" src="images/foto8.JPEG" alt="Una de nuestras primeras fotos">
+          <h2>Una de nuestras primeras fotos</h2>
+          <div class="meta">Marzo 2024</div>
+          <div class="text">Te fui a buscar a la facultad un día de lluvia. Estaba muy nervioso.</div>
+        </article>
+
+	<article class="card">
+          <img class="photo" src="images/foto9.JPEG" alt="Nuestra primera merienda">
+          <h2>Nuestra primera merienda</h2>
+          <div class="meta">Junio 2024</div>
+          <div class="text">Esa tarde fuimos a merendar. Casualmente tiempo despues fue tu primer trabajo.</div>
+        </article>
+
+	<article class="card">
+          <img class="photo" src="images/foto12.JPEG" alt="El verano">
+          <h2>El verano</h2>
+          <div class="meta">Diciembre 2024</div>
+          <div class="text">Tu estacion favorita. </div>
+        </article>
+
+	<article class="card">
+          <img class="photo" src="images/foto14.JPEG" alt="Momentos graciosos">
+          <h2>Momentos graciosos</h2>
+          <div class="meta">Mayo 2025</div>
+          <div class="text">Siempre tenemos de estos momentos, pocas veces los capturamos. </div>
+        </article>
+
+	<article class="card">
+          <img class="photo" src="images/foto15.JPEG" alt="Viendo a tu cuñado">
+          <h2>Viendo a tu cuñado</h2>
+          <div class="meta">Junio 2025</div>
+          <div class="text">Acompañandome a ver a mi hermano. </div>
+        </article>
+
+	<article class="card">
+          <img class="photo" src="images/foto13.JPEG" alt="Tu cumple">
+          <h2>Tu cumple</h2>
+          <div class="meta">Octubre 2024</div>
+          <div class="text">Intente darte una sorpresa el día de tu cumpleaños. </div>
+        </article>
+
+
+	<article class="card">
+          <img class="photo" src="images/foto11.JPEG" alt="Tu sensibilidad">
+          <h2>Tu sensibilidad</h2>
+          <div class="meta">Abril 2025</div>
+          <div class="text">Amo tu sensibilidad, y las formas de disfrutar los pequeños detalles.</div>
+        </article>
+
+
+
+
+
+      </section>
+
+      <section style="margin-top:20px">
+        <div class="card">
+          <h2>Una dedicatoria</h2>
+          <p class="text">Te amo con todo mi corazón. Gracias por ser vos. Feliz cumpleaños — que este año nos traiga más risas, viajes y abrazos interminables.</p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>— Con amor, <strong>Nico</strong></p>
+      <p style="font-size:13px;color:var(--muted)"></p>
+    </footer>
+  </div>
+
+  <!-- Modal de bienvenida -->
+  <div id="welcome" class="overlay">
+    <div class="modal" role="dialog" aria-modal="true">
+      <h3>Feliz cumpleaños, mi amor ❤️</h3>
+      <p>Hoy es tu día. Abre estos recuerdos cuando quieras sonreír.</p>
+      <button class="close" id="closeBtn">Abrir recuerdos</button>
+    </div>
+  </div>
+
+  <script>
+    // Cerrar modal con botón o escape
+    const welcome = document.getElementById('welcome');
+    const closeBtn = document.getElementById('closeBtn');
+    closeBtn.addEventListener('click', () => welcome.style.display='none');
+    document.addEventListener('keydown', e => { if(e.key === 'Escape') welcome.style.display='none' });
+
+    // Si entras desde QR querrás ver el contenido directo — opcional: cerramos automáticamente después de 2.5s
+    // welcome.style.display = 'flex'; // por defecto mostrado
+
+    // Pequeño ajuste: al hacer click en la hero, scrollea suavemente
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const target = document.querySelector(a.getAttribute('href'));
+        if(target) target.scrollIntoView({behavior:'smooth'});
+      })
+    })
+  </script>
+</body>
+</html>
